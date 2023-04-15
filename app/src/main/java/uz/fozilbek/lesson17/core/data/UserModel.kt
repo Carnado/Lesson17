@@ -1,0 +1,1 @@
+package uz.fozilbek.lesson17.core.datadata class UserModel(val imageIndex: Int, val backgroundColor: String, val userName: String, val userFollowers: Int)

@@ -1,0 +1,1 @@
+package uz.fozilbek.lesson17.core.appimport android.app.Applicationimport uz.fozilbek.lesson17.core.cache.UserCacheclass App : Application() {    override fun onCreate() {        super.onCreate()        UserCache.init(this)    }}

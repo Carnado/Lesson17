@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UserAddActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/custom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/window_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="User add screen"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="76dp"
+        android:hint="Foydalanuvchi ismi"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/custom_action_bar" />
+
+
+    <EditText
+        android:id="@+id/user_followers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="26dp"
+        android:hint="Foydalanuvchining obunachilar soni"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_group"
+        android:src="@drawable/baseline_person_24"
+        app:shapeAppearanceOverlay="@style/CircleImageStyle"
+        app:strokeColor="@color/white"
+        android:includeFontPadding="false"
+        app:strokeWidth="1dp"
+        tools:background="#A19FA0" />
+
+    <TextView
+        android:id="@+id/choose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Rasmlardan birini tanlang"
+        app:layout_constraintStart_toStartOf="@id/image_group"
+        app:layout_constraintTop_toBottomOf="@id/user_followers" />
+
+    <GridLayout
+        android:id="@+id/image_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:columnCount="3"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_image">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_icon_1"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            android:src="@drawable/person1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_icon_2"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            android:src="@drawable/person2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_icon_3"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/person3"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#E91E63" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_icon_4"
+            android:layout_width="66dp"
+            android:src="@drawable/person4"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#E91E63" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_icon_5"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:src="@drawable/person5"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#E91E63" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_icon_6"
+            android:layout_width="66dp"
+            android:src="@drawable/person6"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#E91E63" />
+
+    </GridLayout>
+<!--    ColorChanged-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_color"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/color_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/color_group"
+        android:src="#1dd1a1"
+        app:shapeAppearanceOverlay="@style/CircleImageStyle"
+        app:strokeColor="@color/white"
+        android:includeFontPadding="false"
+        app:strokeWidth="1dp" />
+    <TextView
+        android:id="@+id/choose_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Ranglardan birini tanlang"
+        app:layout_constraintStart_toStartOf="@id/color_group"
+        app:layout_constraintTop_toBottomOf="@id/image_group" />
+    <GridLayout
+        android:id="@+id/color_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:columnCount="3"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_color">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/color_1"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            android:src="#48dbfb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            android:background="#48dbfb"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/color_2"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            android:src="#10ac84"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            android:background="#10ac84"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/color_3"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:src="#ff9f43"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#ff9f43" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/color_4"
+            android:layout_width="66dp"
+            android:src="#5f27cd"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#5f27cd" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/color_5"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:src="#576574"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#576574" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/color_6"
+            android:layout_width="66dp"
+            android:src="#2e86de"
+            android:layout_height="66dp"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            tools:background="#2e86de" />
+
+    </GridLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/save_user"
+        app:tint="#fff"
+        android:src="@android:drawable/ic_menu_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
