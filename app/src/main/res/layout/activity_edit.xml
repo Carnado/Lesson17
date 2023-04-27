@@ -171,7 +171,7 @@
             tools:background="#E91E63" />
 
     </GridLayout>
-<!--    ColorChanged-->
+    <!--    ColorChanged-->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/user_color"
         android:layout_width="0dp"
